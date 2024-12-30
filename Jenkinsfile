@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Cloner le code') {
             steps {
@@ -10,30 +9,32 @@ pipeline {
         }
         stage('Installer les dépendances') {
             steps {
-                echo 'Installation des dépendances avec npm...'
-                sh 'npm install'
+                dir('portfolio') { // Navigue dans le dossier 'portfolio'
+                    echo 'Installation des dépendances avec npm...'
+                    sh 'npm install'
+                }
             }
         }
         stage('Lancer les tests') {
             steps {
-                echo 'Exécution des tests...'
-                sh 'npm test -- --watchAll=false'
+                dir('portfolio') {
+                    echo 'Exécution des tests...'
+                    sh 'npm test -- --watchAll=false'
+                }
             }
         }
         stage('Construire l\'application') {
             steps {
-                echo 'Création du build...'
-                sh 'npm run build'
+                dir('portfolio') {
+                    echo 'Construction de l\'application...'
+                    sh 'npm run build'
+                }
             }
         }
     }
-
     post {
-        always {
-            echo 'Pipeline terminé.'
-        }
         success {
-            echo 'Le pipeline a réussi avec succès.'
+            echo 'Pipeline terminé avec succès.'
         }
         failure {
             echo 'Le pipeline a échoué.'
