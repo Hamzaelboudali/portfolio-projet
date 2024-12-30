@@ -1,0 +1,30 @@
+.testimonials {
+    padding: 50px;
+    background-color: var(--background-color); /* Fond adaptable au mode */
+    color: var(--text-color); /* Texte adaptable au mode */
+    text-align: center;
+  }
+  
+  .testimonials h2 {
+    font-size: 2rem;
+    color: var(--text-color); /* Titre adaptable au mode */
+  }
+  
+  .testimonials .testimonial {
+    padding: 15px;
+    border: 1px solid var(--text-color); /* Bordure adaptable au mode */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: var(--background-color); /* Fond adaptable au mode */
+    color: var(--text-color); /* Texte adaptable au mode */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .testimonials .testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    color: var(--text-color);
+  }
+  

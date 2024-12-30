@@ -1,0 +1,51 @@
+.contact {
+  padding: 50px;
+  background-color: var(--background-color); /* Fond adaptable au mode */
+  color: var(--text-color); /* Texte adaptable au mode */
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  color: var(--text-color); /* Titre adaptable au mode */
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact input, 
+.contact textarea {
+  padding: 10px;
+  border: 1px solid var(--text-color); /* Bordure adaptable au mode */
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: var(--background-color); /* Fond adaptable au mode */
+  color: var(--text-color); /* Texte adaptable au mode */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: var(--text-color); /* Placeholder adapté au mode */
+  opacity: 0.6;
+}
+
+.contact button {
+  padding: 10px 20px;
+  background-color: var(--button-bg-color); /* Bouton adaptable au mode */
+  color: var(--button-text-color); /* Texte du bouton adaptable au mode */
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact button:hover {
+  opacity: 0.8; /* Effet hover simple */
+}

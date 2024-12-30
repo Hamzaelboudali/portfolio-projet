@@ -1,0 +1,59 @@
+.skills {
+  text-align: center;
+  padding: 50px;
+  background-color: var(--background-color); /* Fond adapté au mode */
+  color: var(--text-color); /* Texte adapté au mode */
+}
+
+.skills h2 {
+  font-size: 2rem;
+  color: var(--text-color); /* Titre adaptable au mode */
+  margin-bottom: 30px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skills-category {
+  background-color: var(--background-color); /* Fond des catégories adapté au mode */
+  color: var(--text-color); /* Texte des catégories adapté au mode */
+  border: 1px solid var(--text-color); /* Bordure visible dans les deux modes */
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.skills-category:hover {
+  transform: scale(1.03); /* Animation au survol */
+}
+
+.skills-category h3 {
+  font-size: 1.2rem;
+  color: var(--text-color); /* Titre des catégories adaptable au mode */
+  margin-bottom: 15px;
+}
+
+.skills-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Organiser les compétences dans chaque catégorie */
+  gap: 10px;
+}
+
+.skills-category ul li {
+  background-color: var(--background-color); /* Fond des compétences adapté au mode */
+  color: var(--text-color); /* Texte des compétences adapté au mode */
+  padding: 10px;
+  border: 1px solid var(--text-color); /* Bordure visible dans les deux modes */
+  border-radius: 8px;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.skills-category ul li:hover {
+  transform: scale(1.05); /* Animation au survol */
+}

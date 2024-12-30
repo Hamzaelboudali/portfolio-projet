@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  position: fixed; /* Le header reste en haut */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ombre pour un effet propre */
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espace entre les liens */
+}
+
+.header nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.header nav a:hover {
+  color: var(--button-bg-color); /* Couleur de survol */
+}
+
+.theme-toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px; /* Augmenté pour être plus visible */
+  padding: 5px 10px;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.theme-toggle-button:hover {
+  color: var(--button-bg-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header nav {
+    display: none; /* Cache le menu sur petit écran */
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    color: var(--text-color);
+  }
+}

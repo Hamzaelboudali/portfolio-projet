@@ -1,0 +1,46 @@
+.projects {
+  padding: 50px;
+  background-color: var(--background-color); /* Fond adapté au mode */
+  color: var(--text-color); /* Texte adapté au mode */
+}
+
+.projects h2 {
+  font-size: 2rem;
+  color: var(--text-color); /* Titre adaptable au mode */
+  text-align: center;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-item {
+  background-color: var(--background-color); /* Fond des items adapté au mode */
+  color: var(--text-color); /* Texte des items adapté au mode */
+  padding: 20px;
+  border: 1px solid var(--text-color); /* Bordure visible dans les deux modes */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombrage doux */
+  transition: transform 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.project-item:hover {
+  transform: translateY(-5px); /* Animation au survol */
+}
+
+.project-item h3 {
+  color: var(--text-color); /* Titre des projets adaptable au mode */
+  font-size: 1.2rem;
+}
+
+.project-item p {
+  color: var(--text-color); /* Description des projets adaptable au mode */
+  font-size: 1rem;
+}
+.project-item.highlight {
+  background-color: #ffd700; /* Couleur dorée pour attirer l'attention */
+  border-color: #ff8c00;
+}

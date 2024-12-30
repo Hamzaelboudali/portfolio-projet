@@ -1,0 +1,62 @@
+:root {
+  --background-color: #f4f4f4; /* Couleur de fond par défaut */
+  --text-color: #333; /* Couleur du texte */
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Empiler l'image et le texte verticalement */
+  padding: 50px;
+  gap: 20px;
+  background-color: var(--background-color); /* Fond adaptable */
+  color: var(--text-color); /* Texte adaptable */
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center; /* Centre le texte et les éléments dans la section */
+  margin-top: 30px; /* Espace au-dessus pour ne pas empiéter sur le header */
+}
+
+.about img {
+  border-radius: 50%;
+  width: 130px; /* Réduit la taille de l'image */
+  height: 130px; /* Assure une taille proportionnelle */
+  object-fit: cover; /* Garde l'image dans le cercle sans déformation */
+  border: 2px solid var(--text-color); /* Bordure autour de l'image */
+  transition: border-color 0.3s;
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: var(--text-color); /* Couleur du titre */
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 1rem;
+  color: var(--text-color); /* Couleur du texte */
+  line-height: 1.6;
+  opacity: 0.8; /* Légère transparence pour le contraste */
+  max-width: 600px; /* Limite la largeur du texte */
+  margin: 0 auto; /* Centre le texte */
+  text-align: center; /* Centre le texte au sein de son conteneur */
+}
+
+@media (max-width: 768px) {
+  .about {
+      padding: 30px; /* Réduit l'espace intérieur pour mobile */
+  }
+
+  .about img {
+      width: 100px;
+      height: 100px; /* Réduit la taille de l'image */
+  }
+
+  .about h2 {
+      font-size: 1.5rem; /* Taille du titre plus petite sur mobile */
+  }
+
+  .about p {
+      font-size: 0.9rem; /* Réduit la taille du texte sur mobile */
+  }
+}

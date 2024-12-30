@@ -1,0 +1,29 @@
+.certifications {
+    padding: 50px;
+    background-color: var(--background-color); /* Fond adaptable au mode */
+    color: var(--text-color); /* Texte adaptable au mode */
+    text-align: center;
+  }
+  
+  .certifications h2 {
+    font-size: 2rem;
+    color: var(--text-color); /* Titre adaptable au mode */
+  }
+  
+  .certifications ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 400px;
+  }
+  
+  .certifications li {
+    padding: 10px;
+    border: 1px solid var(--text-color); /* Bordure adaptable au mode */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: var(--background-color); /* Fond adaptable au mode */
+    color: var(--text-color); /* Texte adaptable au mode */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
